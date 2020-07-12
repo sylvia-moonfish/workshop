@@ -1,0 +1,35 @@
+{
+  "name": "workshop",
+  "version": "1.0.0",
+  "description": "workshop",
+  "private": true,
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sylvia-moonfish/workshop.git"
+  },
+  "author": "sylvia-moonfish",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sylvia-moonfish/workshop/issues"
+  },
+  "homepage": "https://github.com/sylvia-moonfish/workshop#readme",
+  "dependencies": {
+    "@zeit/next-less": "^1.0.1",
+    "antd": "^4.4.1",
+    "css-loader": "^3.6.0",
+    "express": "^4.17.1",
+    "isomorphic-style-loader": "^5.1.0",
+    "less": "^3.11.3",
+    "less-loader": "^6.2.0",
+    "next": "^9.4.4",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "style-loader": "^1.2.1"
+  }
+}
