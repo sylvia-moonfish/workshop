@@ -16,10 +16,16 @@
     <SaveNodeJsSettingsInProjectFile>True</SaveNodeJsSettingsInProjectFile>
     <ScriptArguments>
     </ScriptArguments>
+    <EnableTypeScript>true</EnableTypeScript>
+    <TypeScriptSourceMap>true</TypeScriptSourceMap>
+    <TypeScriptModuleKind>CommonJS</TypeScriptModuleKind>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
   <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
   <ItemGroup>
+    <Content Include=".prettierignore">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="data\site-info.json">
       <SubType>Code</SubType>
     </Content>
@@ -27,27 +33,35 @@
       <SubType>Code</SubType>
     </Content>
     <Content Include="package.json" />
-    <Content Include="pages\index.js">
-      <SubType>Code</SubType>
-    </Content>
-    <Content Include="pages\_app.js">
-      <SubType>Code</SubType>
-    </Content>
+    <Content Include="public\banner.jpg" />
+    <Content Include="public\profile.jpg" />
     <Content Include="server.js">
-      <SubType>Code</SubType>
-    </Content>
-    <Content Include="src\components\page-component.js">
       <SubType>Code</SubType>
     </Content>
     <Content Include="styles.less">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="tsconfig.json">
+      <SubType>Code</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="data\" />
+    <Folder Include="public\" />
     <Folder Include="src\" />
     <Folder Include="pages\" />
     <Folder Include="src\components\" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="pages\index.tsx">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="pages\_app.tsx">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="src\components\page-component.tsx">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />

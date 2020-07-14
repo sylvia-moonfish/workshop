@@ -1,0 +1,6 @@
+.next
+.vs
+bin
+node_modules
+obj
+public

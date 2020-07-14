@@ -1,13 +1,15 @@
-const withLess = require('@zeit/next-less')
+const withLess = require("@zeit/next-less");
 
 module.exports = withLess({
-    lessLoaderOptions: {
-        lessOptions: {
-            modifyVars: {
-                'primary-color': '#722ed1',
-                'body-background': '#141414'
-            },
-            javascriptEnabled: true
-        }
-    }
-})
+  lessLoaderOptions: {
+    lessOptions: {
+      modifyVars: {
+        "body-background": "#141414",
+        "font-family":
+          "'Noto Sans KR', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'",
+        "primary-color": "#722ed1",
+      },
+      javascriptEnabled: true,
+    },
+  },
+});
