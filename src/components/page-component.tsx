@@ -21,7 +21,7 @@ abstract class PageComponent extends React.Component {
   }
 
   componentDidMount(): void {
-    Router.events.on("routeChangeComplete", function (url: string): void {
+    Router.events.on("routerChangeComplete", function (url: string): void {
       (window as any).gtag("config", SiteInfo.gtmId, {
         page_location: url,
       });
@@ -32,7 +32,7 @@ abstract class PageComponent extends React.Component {
 
   render(): JSX.Element {
     if (!this.pageData.title) throw new Error("title is missing.");
-    if (!this.pageData.description) throw new Error("description is missing");
+    if (!this.pageData.description) throw new Error("description is missing.");
 
     return (
       <React.Fragment>

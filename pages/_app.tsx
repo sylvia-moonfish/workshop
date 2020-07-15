@@ -1,4 +1,4 @@
-import { Layout, Menu } from 'antd';
+import { Layout, Menu } from "antd";
 
 import React from "react";
 
@@ -28,22 +28,32 @@ class WorkshopApp extends App {
             href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap"
             rel="stylesheet"
           />
-                <link href="/profile.jpg" rel="icon" type="image/jpg" />
-                <script async src={'https://www.googletagmanager.com/gtag/js?id=' + SiteInfo.gtmId} />
-                <script dangerouslySetInnerHTML={{
-                    __html: "window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', '" + SiteInfo.gtmId + "');"
-                }} />
-            </Head>
-            <Layout>
-                <Layout.Header>
-                    <Menu mode="horizontal" theme="dark">
-                        <Menu.Item key="1">TEST</Menu.Item>
-                    </Menu>
-                </Layout.Header>
-                <Layout.Content>
-                    <this.props.Component {...this.props.pageProps} />
-                </Layout.Content>
-            </Layout>
+          <link href="/profile.jpg" rel="icon" type="image/jpg" />
+          <script
+            async
+            src={
+              "https://www.googletagmanager.com/gtag/js?id=" + SiteInfo.gtmId
+            }
+          />
+          <script
+            dangerouslySetInnerHTML={{
+              __html:
+                "window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', '" +
+                SiteInfo.gtmId +
+                "');",
+            }}
+          />
+        </Head>
+        <Layout>
+          <Layout.Header>
+            <Menu mode="horizontal" theme="dark">
+              <Menu.Item key="1">TEST</Menu.Item>
+            </Menu>
+          </Layout.Header>
+          <Layout.Content>
+            <this.props.Component {...this.props.pageProps} />
+          </Layout.Content>
+        </Layout>
       </React.Fragment>
     );
   }

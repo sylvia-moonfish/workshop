@@ -1,5 +1,7 @@
-const express = require("express");
-const next = require("next");
+import express from "express";
+import next from "next";
+
+import routes from "./routes/index";
 
 const port = parseInt(process.env.PORT, 10) || 3000;
 const dev = process.env.NODE_ENV !== "production";
@@ -8,6 +10,8 @@ const handle = app.getRequestHandler();
 
 app.prepare().then(() => {
   const server = express();
+
+  server.use("/test", routes);
 
   server.all("*", (req, res) => {
     return handle(req, res);
