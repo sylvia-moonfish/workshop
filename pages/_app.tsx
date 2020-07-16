@@ -1,4 +1,9 @@
-import { Layout, Menu } from "antd";
+import { Button, Layout, Menu } from "antd";
+import {
+  HomeOutlined,
+  ScheduleOutlined,
+  SkinOutlined,
+} from "@ant-design/icons";
 
 import React from "react";
 
@@ -8,9 +13,19 @@ import Head from "next/head";
 import SiteInfo from "../data/site-info.json";
 import "../styles.less";
 
-class WorkshopApp extends App {
+class WorkshopApp extends App<
+  AppProps,
+  {},
+  {
+    sliderCollapsed: boolean;
+  }
+> {
   constructor(props: AppProps) {
     super(props);
+
+    this.state = {
+      sliderCollapsed: false,
+    };
   }
 
   render(): JSX.Element {
@@ -44,13 +59,29 @@ class WorkshopApp extends App {
             }}
           />
         </Head>
-        <Layout>
+        <Layout
+          style={{
+            minHeight: "100vh",
+          }}
+        >
           <Layout.Header>
             <Menu mode="horizontal" theme="dark">
-              <Menu.Item key="1">TEST</Menu.Item>
+              <Menu.Item icon={<HomeOutlined />} key="1">
+                Platy's Workshop
+              </Menu.Item>
+              <Menu.Item icon={<SkinOutlined />} key="2">
+                Gear Set Manager
+              </Menu.Item>
+              <Menu.Item icon={<ScheduleOutlined />} key="3">
+                Battle Rotation Planner
+              </Menu.Item>
             </Menu>
           </Layout.Header>
-          <Layout.Content>
+          <Layout.Content
+            style={{
+              minHeight: 280,
+            }}
+          >
             <this.props.Component {...this.props.pageProps} />
           </Layout.Content>
         </Layout>
