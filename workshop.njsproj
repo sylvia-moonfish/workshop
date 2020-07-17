@@ -60,8 +60,12 @@
     <Folder Include="pages\" />
     <Folder Include="public\" />
     <Folder Include="src\components\" />
+    <Folder Include="src\icons\" />
   </ItemGroup>
   <ItemGroup>
+    <TypeScriptCompile Include="pages\gears.tsx">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
     <TypeScriptCompile Include="pages\index.tsx">
       <SubType>Code</SubType>
     </TypeScriptCompile>
@@ -71,6 +75,9 @@
     <TypeScriptCompile Include="server\routes\index.ts" />
     <TypeScriptCompile Include="server\server.ts" />
     <TypeScriptCompile Include="src\components\page-component.tsx">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="src\icons\twitch-outlined.tsx">
       <SubType>Code</SubType>
     </TypeScriptCompile>
   </ItemGroup>
