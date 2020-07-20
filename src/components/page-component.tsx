@@ -1,9 +1,6 @@
 import Head from "next/head";
-import Router from "next/router";
 
 import React from "react";
-
-import SiteInfo from "../../data/site-info.json";
 
 abstract class PageComponent extends React.Component {
   pageData: {
@@ -18,14 +15,6 @@ abstract class PageComponent extends React.Component {
       title: title,
       description: description,
     };
-  }
-
-  componentDidMount(): void {
-    Router.events.on("routeChangeComplete", function (url: string): void {
-      (window as any).gtag("config", SiteInfo.gtmId, {
-        page_location: url,
-      });
-    });
   }
 
   abstract renderBody(): JSX.Element;

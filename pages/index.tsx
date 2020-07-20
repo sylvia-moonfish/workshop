@@ -79,17 +79,22 @@ class Index extends PageComponent {
             >
               <Card.Meta
                 avatar={<Avatar icon={<SkinOutlined />} />}
-                description="TEST"
+                description="Track and manage your gear sets!"
                 title="Gear Set Manager"
               />
             </Card>
           </Col>
           <Col span={1} />
           <Col span={8}>
-            <Card hoverable>
+            <Card
+              hoverable
+              onClick={() => {
+                Router.push("/rotations");
+              }}
+            >
               <Card.Meta
                 avatar={<Avatar icon={<ScheduleOutlined />} />}
-                description="TEST"
+                description="Plan and simulate your skill rotations!"
                 title="Battle Rotation Planner"
               />
             </Card>

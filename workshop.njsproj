@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">14.0</VisualStudioVersion>
@@ -11,16 +10,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>5999dd43-e293-415d-96ac-00f461e29b22</ProjectGuid>
+    <ProjectGuid>48cbe3e3-0139-4839-9985-d657b95f4878</ProjectGuid>
     <ProjectHome>.</ProjectHome>
     <StartupFile>server/server.js</StartupFile>
+    <StartWebBrowser>False</StartWebBrowser>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
-    <NodejsPort>1337</NodejsPort>
+    <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
     <EnableTypeScript>true</EnableTypeScript>
     <StartWebBrowser>True</StartWebBrowser>
   </PropertyGroup>
@@ -40,8 +39,10 @@
     <Content Include="next.config.js">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="package.json" />
     <Content Include="public\banner.jpg" />
     <Content Include="public\profile.jpg" />
+    <Content Include="README.md" />
     <Content Include="server\tsconfig.json">
       <SubType>Code</SubType>
     </Content>
@@ -49,37 +50,34 @@
       <SubType>Code</SubType>
     </Content>
     <Content Include="tsconfig.json" />
-    <Content Include="package.json" />
-    <Content Include="README.md" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="data\" />
+    <Folder Include="public\" />
     <Folder Include="server\" />
+    <Folder Include="pages\" />
     <Folder Include="server\routes\" />
     <Folder Include="src\" />
-    <Folder Include="pages\" />
-    <Folder Include="public\" />
     <Folder Include="src\components\" />
     <Folder Include="src\icons\" />
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="pages\gears.tsx">
-      <SubType>Code</SubType>
-    </TypeScriptCompile>
-    <TypeScriptCompile Include="pages\index.tsx">
+    <TypeScriptCompile Include="pages\gears.tsx" />
+    <TypeScriptCompile Include="pages\index.tsx" />
+    <TypeScriptCompile Include="pages\rotations.tsx">
       <SubType>Code</SubType>
     </TypeScriptCompile>
     <TypeScriptCompile Include="pages\_app.tsx">
       <SubType>Code</SubType>
     </TypeScriptCompile>
-    <TypeScriptCompile Include="server\routes\index.ts" />
-    <TypeScriptCompile Include="server\server.ts" />
-    <TypeScriptCompile Include="src\components\page-component.tsx">
+    <TypeScriptCompile Include="server\routes\index.ts">
       <SubType>Code</SubType>
     </TypeScriptCompile>
-    <TypeScriptCompile Include="src\icons\twitch-outlined.tsx">
+    <TypeScriptCompile Include="server\server.ts">
       <SubType>Code</SubType>
     </TypeScriptCompile>
+    <TypeScriptCompile Include="src\components\page-component.tsx" />
+    <TypeScriptCompile Include="src\icons\twitch-outlined.tsx" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
   <ProjectExtensions>

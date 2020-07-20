@@ -33,6 +33,10 @@ class WorkshopApp extends App<
     this.determineCurrentRoute();
     Router.events.on("routeChangeComplete", (url: string): void => {
       this.determineCurrentRoute();
+
+      (window as any).gtag("config", SiteInfo.gtmId, {
+        page_location: url,
+      });
     });
   }
 
