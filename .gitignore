@@ -339,4 +339,6 @@ ASALocalRun/
 # BeatPulse healthcheck temp database
 healthchecksdb
 /.next
-*.js
+server/**/*.js
+*.d.ts
+package-lock.json
